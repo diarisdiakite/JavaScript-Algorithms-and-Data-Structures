@@ -1,0 +1,27 @@
+function bouncer(arr) {
+  let newArr = []
+  for(let i in arr){
+    if(arr[i]){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+let x = bouncer([7, "ate", "", false, 9]);
+console.log(x)
+
+console.log("-------------------------")
+console.log("Just trying destructuring while having not to mutate arr")
+function bouncer(arr) {
+    let newArr = [...arr]
+    for(let i in arr){
+      if(!newArr[i]){
+        delete newArr[i];
+      }
+    }
+    return newArr.filter(item => item !== "");
+  }
+  
+  let y = bouncer([7, "ate", "", false, 9]);
+  console.log(y)

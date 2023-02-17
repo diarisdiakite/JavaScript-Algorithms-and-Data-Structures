@@ -1,0 +1,17 @@
+function getIndexToIns(arr, num) {
+  //sort the array
+  let sortedArr = arr.sort((a, b) => a-b)
+
+  //find the index of the first number higer or equal to num
+  for(let i=0; i<sortedArr.length; i++){//for in not working... any explanation ???
+    if(sortedArr[i] >= num){
+      return i
+    }
+
+  }
+  
+  return sortedArr.length;
+}
+
+let x = getIndexToIns([10, 20, 30, 40, 50], 35);
+console.log(x) 

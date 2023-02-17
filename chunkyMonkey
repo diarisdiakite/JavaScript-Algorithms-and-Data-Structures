@@ -1,0 +1,13 @@
+function chunkArrayInGroups(arr, size) {
+  //declare variables
+  let finalArr = [];
+  //loop through arr
+  //the split has to be the length of size
+  for(let i=0; i<arr.length; i+=size){
+    finalArr.push(arr.slice(i, i+size))
+  }
+  return finalArr;
+}
+
+let x = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+console.log(x)

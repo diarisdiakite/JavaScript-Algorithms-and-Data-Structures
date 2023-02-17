@@ -1,0 +1,18 @@
+function titleCase(str) {
+  //declare variables
+  let newStr = [] //has to be an array to be joined afterwards
+  let splittedStr = str.split(" ");
+  
+  
+  for(let word in splittedStr){
+    //let remaining = splittedStr[word].slice(1)
+    //console.log(remaining)
+    //console.log(word, splittedStr[word]);
+    newStr[word] = splittedStr[word][0].toUpperCase() + splittedStr[word].slice(1).toLowerCase();
+  }
+
+  return newStr.join(" ");
+}
+
+let x = titleCase("I'm a little tea pot");
+console.log(x)
