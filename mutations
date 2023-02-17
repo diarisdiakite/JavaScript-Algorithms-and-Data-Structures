@@ -1,0 +1,20 @@
+function mutation(arr) {
+  //declare variables
+  //don't forget to put them to the same case
+  let test = arr[1].toLowerCase();
+  let target = arr[0].toLowerCase();
+
+  //loop through arr[1] 
+    //find out if all the words are in arr[0]
+    for(let letter in test){
+      //console.log(letter, test[letter]);
+      if(target.indexOf(test[letter])<0){
+        return false
+      }
+    }
+  
+  return true;
+}
+
+let x = mutation(["hello", "hey"]);
+console.log(x);
