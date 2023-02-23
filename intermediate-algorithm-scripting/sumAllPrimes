@@ -1,0 +1,34 @@
+function sumPrimes(num) {
+  //declarations
+  let sum=0;
+
+  //write the function checkPrimality(num) 
+  const checkPrimality = (I) => {
+    if(I === 2 || I === 3) return true;
+    if(I <= 1 || I%2 === 0 || I%3 === 0) return false;
+    for(let i=5, j=7; i<= Math.sqrt(I); i+=6, j+=6){
+      if(I%i===0 || I%j===0) return false;
+    }
+    return true;
+  }
+
+  // sum all prime numbers within the range
+  for(let i=2; i<=num; i++){
+    if(checkPrimality(i)){
+      sum += i;
+    }
+    
+  }
+
+  return sum;
+}
+
+
+let result = sumPrimes(977);
+console.log(result)
+
+//2 + 3 + 5 + 7 = 17
+
+//the result should be 73156
+//Result Replit : 72179
+//Result my try codeCamp 74961

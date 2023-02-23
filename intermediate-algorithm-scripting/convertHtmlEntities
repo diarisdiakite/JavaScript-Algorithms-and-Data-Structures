@@ -32,4 +32,6 @@ function convertHTML(str) {
 }
 
 let result = convertHTML("<>");
-console.log(result)
+console.log(result);
+
+//Trying with Objects
