@@ -1,0 +1,22 @@
+function myReplace(str, before, after) {
+  let splittedStr = str.split("");
+  let finalStr = [];
+  
+  for(let letter in before){
+    if(/^[a-z]+$/.test(before)===true){
+      //console.log(after[0]);
+      finalStr = str.replace(before, after.toLowerCase());
+    }else if(/^[A-Z]/.test(before)===true){
+      finalStr = str.replace(before, after[0].toUpperCase()+after.slice(1).toLowerCase());
+      //console.log(after[0])
+    }
+  }
+
+  return finalStr;
+  //case === beforeCase
+  //if(before[0]===char.ToUppercase())
+  //if(before[0].toUppercase() == before[0])
+}
+
+let x = myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
+console.log(x) 

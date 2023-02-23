@@ -1,0 +1,14 @@
+function spinalCase(str) {
+  let splittedStr = str.split(/\W|(?=[A-Z])|_/)
+  //A positive look ahead to split on capital letters
+  let newStr = [];
+  for(let word in splittedStr){
+    newStr[word] = splittedStr[word].toLowerCase()
+  }
+  let filterdNewStr = newStr.filter(item => item !== "")
+  
+  return filterdNewStr.join("-");
+}
+
+let x = spinalCase("AllThe-small Things");
+console.log(x)

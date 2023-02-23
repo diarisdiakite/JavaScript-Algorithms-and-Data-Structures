@@ -1,0 +1,54 @@
+function pairElement(str) {
+  let subArrays = [];
+  
+  for(let i = 0; i<str.length; i++){
+    if(str[i]==="A"){
+      subArrays.push(["A", "T"]);
+    }
+    if(str[i]==="T"){
+      subArrays.push(["T", "A"]);
+    }
+    if(str[i]==="C"){
+      subArrays.push(["C", "G"]);
+    }
+    if(str[i]==="G"){
+      subArrays.push(["G", "C"]);
+    }
+    //return subArrays;
+  }
+  return subArrays;
+}
+
+let resultPaireElements = pairElement("GCGA");
+console.log(resultPaireElements)
+
+// Let's try with switch
+function pairElement1(str) {
+    let subArrays = [];
+    //let output = 
+    for(let letter in str){
+      switch(str[letter]){
+        case "A":
+        subArrays.push(["A", "T"]);
+        break;
+  
+        case "T":
+        subArrays.push(["T", "A"]);
+        break;
+  
+        case "C":
+        subArrays.push(["C", "G"]);
+        break;
+  
+        case "G":
+        subArrays.push(["G", "C"]);
+        break;
+      }
+    }
+  
+  
+    return subArrays;
+  }
+  
+  let x = pairElement1("AACG");
+  console.log(x)

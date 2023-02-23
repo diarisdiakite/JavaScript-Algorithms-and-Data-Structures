@@ -1,0 +1,19 @@
+function destroyer(arr) {
+  //Object.values ___ an intersting discovery
+  let input = Object.values(arr);
+  //console.log(input);
+  let toDestroy = Object.values(arguments).slice(1);
+  //console.log(toDestroy);
+
+  for (let i=0; i<arr.length; i++){
+    for(let j=0; j<toDestroy.length; j++){
+      if(arr[i]===toDestroy[j]){
+        delete(arr[i]);
+      }
+    }
+  }
+  return arr.filter(item => item !== null);
+}
+
+let result = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(result);

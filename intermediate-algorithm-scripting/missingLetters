@@ -1,0 +1,51 @@
+function fearNotLetter(str) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz"
+  let startingStr = str[0];
+  let endingStr = str[str.length-1]
+
+  let indexOfStartingAlphabet = alphabet.indexOf(startingStr)
+  //console.log(alphabet[indexOfStartingAlphabet]);
+
+  let indexOfEndingAlphabet = alphabet.indexOf(endingStr)
+  //console.log(alphabet[indexOfEndingAlphabet])
+  
+  //recursion to list letters from indexOfStartingAlphabet to indexOfEndingAlphabet 
+  //function to be fixed
+  function recusionAlphabet(indexOfStartingAlphabet, indexOfEndingAlphabet){
+    if(indexOfStartingAlphabet > indexOfEndingAlphabet){
+      return [];
+    }else if(indexOfStartingAlphabet === indexOfEndingAlphabet){
+      return[indexOfEndingAlphabet];
+    }else{
+      //declare
+      const alphabetArr = recusionAlphabet(indexOfStartingAlphabet, indexOfEndingAlphabet-1)
+      //push or unshift
+      alphabetArr.push(indexOfEndingAlphabet)
+      //return
+      console.log(alphabetArr)
+      return alphabetArr;
+     }
+  }
+  //console.log(recusionAlphabet("a", "e")); //to Fix
+
+  let alphabetStr = ""
+  for(let i=indexOfStartingAlphabet; i<=indexOfEndingAlphabet; i++){
+    alphabetStr += alphabet[i];
+  }
+  //console.log(alphabetStr);
+
+  let missingLetters = "";
+  for(let letter in alphabetStr){
+    if(str.indexOf(alphabetStr[letter])<0){
+      missingLetters += alphabetStr[letter];
+    }
+  }
+  if(missingLetters.length > 0){
+    return missingLetters;
+  }else{
+    return undefined
+  }
+}
+
+let x = fearNotLetter("abce");
+console.log(x)
