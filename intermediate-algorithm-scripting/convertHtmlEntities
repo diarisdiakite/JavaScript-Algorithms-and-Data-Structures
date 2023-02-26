@@ -34,4 +34,27 @@ function convertHTML(str) {
 let result = convertHTML("<>");
 console.log(result);
 
-//Trying with Objects
+//Trying with Objects --- To be fixzs
+
+function convertHTML(str) {
+    let newStr = str.split(""); //When replacing the same Str
+    //console.log(splittedStr)
+   const lookUp = {
+        "&":"&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': '&quot;',
+        "'": "&apos;"
+      }
+     
+    
+    for(let letter in newStr){
+    
+      newStr[letter] = lookUp[newStr[letter]];
+      
+    }
+    return newStr.join("") ;
+  }
+  
+  let x = convertHTML('Stuff in "quotation marks"');
+  console.log(x)
