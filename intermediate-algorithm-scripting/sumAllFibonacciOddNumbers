@@ -1,0 +1,16 @@
+function sumFibs(num) {
+
+  let fibArr = [1, 1];
+  let nextFib = 0;
+  while((nextFib = fibArr[0] + fibArr[1]) <=num){
+    fibArr.unshift(nextFib);
+  }
+   
+  return fibArr.filter(item => item % 2 != 0). reduce((a, b)=> a + b);
+}
+
+let x = sumFibs(10);
+console.log(x)
+
+
+//Really need to redo this exercise...
