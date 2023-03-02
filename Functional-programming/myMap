@@ -1,0 +1,7 @@
+Array.prototype.myMap = function(callback){
+    let output = [];
+    this.forEach((item, index, array)=>
+        output.push(callback(item, index, array))
+    );
+    return output;
+}
