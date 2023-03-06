@@ -1,54 +1,76 @@
 <!DOCTYPE html>
 <html>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>title<head>
-</html>
+<link rel="stylesheet" href="styles.css">
+<title>title</title>
+</head>
 <body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
 <h1 id="title">freeCodeCamp Survey Form</h1>
 <p id="description">Thank you for taking the time to help us improve the platform</p>
 <form id="survey-form">
-  <label for="name" id="name-label" value="name">Name : <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
-  <label for="email" id="email-label" value="email">Email : <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
-  <label for="number" id="number-label" value="age">Phone Number : <input id="number" name="number" type="number" min="18" max="106" placeholder="Enter your number" required /></label>
+  <div id="container">
+    <div class="presentation">
+      <label for="name" id="name-label" value="name">Name : <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
+      <label for="email" id="email-label" value="email">Email : <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+      <label for="number" id="number-label" value="age">Phone Number : <input id="number" name="number" type="number" min="18" max="106" placeholder="Enter your number" required /></label>
+    </div>
 
-  <select id="dropdown"> Which option best describes your current role?
-    <option>Student</option>
-    <option>Full time job</option>
-    <option>Full time learner</option>
-    <option>Other</option>
-  </select>
+    <div class="activity">
+      <label for="dropdown">
+        <h3>Which option best describes your current role? </h3>
+        <select id="dropdown"> 
+          <option>Student</option>
+          <option>Full time job</option>
+          <option>Full time learner</option>
+          <option>Other</option>
+        </select>
+      </label>
+    </div>
 
-  <label for="like" value="">Do you like freeCodeCamp ?
-    <input id="like" name="like" value="definitely" type="radio" checked> Definitely
-    <input id="like" name="like" value="maybe" type="radio"> Maybe
-    <input id="like" name="like" value="not-sure" type="radio"> Not sure
-    <input id="like" name="like" value="not-at-all" type="radio"> Not at all
-  </label>
+    <div class="information">
+      <label for="like" value="">
+        <h3>Do you like freeCodeCamp ?</h3>
+        <input id="like" name="like" value="definitely" type="radio" checked> Definitely 
+        <input id="like" name="like" value="maybe" type="radio"> Maybe
+        <input id="like" name="like" value="not-sure" type="radio"> Not sure
+        <input id="like" name="like" value="not-at-all" type="radio"> Not at all
+      </label>
+    </div>
 
-  <label for="contribution" value=""> Do you contribute on freeCodeCamp.org ? 
-    <input id="contribution" name="contribution" value="everytime" type="radio" checked> Definitely
-    <input id="contribution" name="contribution" value="sometime" type="radio"> Sometime
-    <input id="contribution" name="contribution" value="not-often" type="radio"> Not often
-    <input id="contribution" name="contribution" value="not-at-all" type="radio"> Not at all
-  </label>
+    <div class="information">
+      <label for="contribution" value=""> <h3>Do you contribute on freeCodeCamp.org ? </h3> 
+        <input id="contribution" name="contribution" value="everytime" type="radio" checked> Definitely
+        <input id="contribution" name="contribution" value="sometime" type="radio"> Sometime
+        <input id="contribution" name="contribution" value="not-often" type="radio"> Not often
+        <input id="contribution" name="contribution" value="not-at-all" type="radio"> Not at all
+      </label>
+    </div>
+    <div class="information">
+      <label for="recommandations"> <h3>What would you recommend us to improve?</h3>
+        <input id="recommandations" name="recommandations" value="frond-end" type="checkbox"> Frond-end projects
+        <input id="recommandations" name="recommandations" value="back-end" type="checkbox"> Back-end projects
+        <input id="recommandations" name="recommandations" value="data-visualisation" type="checkbox"> Data visualisation
+        <input id="recommandations" name="recommandations" value="challenges" type="checkbox"> Challenges
+        <input id="recommandations" name="recommandations" value="open-source-community" type="checkbox"> Open source community
+        <input id="recommandations" name="recommandations" value="wiki" type="checkbox"> Wiki
+        <input id="recommandations" name="recommandations" value="other" type="checkbox"> Others
+      <label>
+    </div>
+    <div class="information">
+      <label for="textarea"> <h3>Additional Comments</h3>
+        <textarea id="textarea" rows="3" cols="30"></textarea>
+      </label>
+    </div>
 
-
-  <label for="recommandations">
-    <input id="recommandations" name="recommandations" value="frond-end" type="checkbox"> Frond-end projects
-    <input id="recommandations" name="recommandations" value="back-end" type="checkbox"> Back-end projects
-    <input id="recommandations" name="recommandations" value="data-visualisation" type="checkbox"> Data visualisation
-    <input id="recommandations" name="recommandations" value="challenges" type="checkbox"> Challenges
-    <input id="recommandations" name="recommandations" value="open-source-community" type="checkbox"> Open source community
-    <input id="recommandations" name="recommandations" value="wiki" type="checkbox"> Wiki
-    <input id="recommandations" name="recommandations" value="other" type="checkbox"> Others
-  <label>
-
-  <label for="textarea"> Additional Comments
-    <textarea id="textarea" rows="3" cols="30"></textarea>
-  </label>
-
-  <input id="submit" type="submit" value="Submit">
-
+    <input id="submit" type="submit" value="Submit">
+  </div>
 </form>
+
+<script  src="js/index.js"></script>
+  
 </body>
+</html>
