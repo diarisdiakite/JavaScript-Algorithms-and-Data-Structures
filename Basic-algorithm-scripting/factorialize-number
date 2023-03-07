@@ -1,0 +1,26 @@
+function factorialize(num) {
+  let factorialArr = [];
+  let output = 1;
+
+    //rehearsing recursion
+    function factorialArray(num){
+      if(num < 0){
+        return [0];
+      }else if(num === 0 || num === 1){
+        return [1];
+      }else{
+        factorialArr = factorialArray(num-1);
+        factorialArr.push(num);
+        return factorialArr;
+      }
+    }
+    console.log(factorialArray(num))
+    let myArray = factorialArray(num)
+
+    for (let number in myArray) {
+      output *= myArray[number];
+    }
+    return output; 
+}
+
+console.log(factorialize(5));
