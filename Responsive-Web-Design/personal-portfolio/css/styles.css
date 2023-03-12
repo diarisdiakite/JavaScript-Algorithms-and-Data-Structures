@@ -1,0 +1,161 @@
+#navbar {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    
+  }
+  
+  #navbar ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+    background-color: blue;
+  }
+  
+  #navbar ul li {
+      float: right;
+  }
+  
+  #navbar ul li a {
+      list-style-type: none;padding: 8px;
+      display: inline-block;
+      color: whitesmoke;
+      text-align: center;
+      text-decoration: royalblue; 
+      font-size: large;
+      font-style: italic;
+      font-weight: bolder;
+    }
+  
+  #navbar ul li a:hover {
+      background-color: rgb(20, 12, 22);
+    }
+  
+  #welcome-section {
+      display: flex;
+      width: auto;
+      height: 600px;
+      background-color: transparent;
+      text-align: center;
+      text-decoration-color: antiquewhite;
+      color: rgb(250, 246, 246);
+      padding: 0px auto 15px auto;
+      margin: 0px auto 25px auto;
+      flex-direction: row;
+      justify-content: streched;
+      justify-items: streched;
+  }
+  
+  welcome h1 {
+    color: blue;
+    z-index: 1;
+    margin: auto;
+    text-transform: uppercase;
+  }
+  
+  welcome img {
+    position: absolute;
+    width: 99%;
+    height: 100%;
+    
+  }
+  
+  #projects {
+      position: relative;
+      display:grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      align-content: streched;
+      justify-content: center;
+  }
+  
+  #projects-item-left {
+    grid: 50%;
+  }
+  
+  #projects-item-right {
+    grid: 50%;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    #projects {
+      flex-direction: column;
+    }
+  }
+  
+  #project {
+      display:flex;
+      flex-direction: rows;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      justify-items: flex-end;
+  }
+  
+  project img {
+      width: 450px;
+      height: 450px;
+      position: relative;
+      border: 1px solid red;
+    
+  }
+
+  project div {
+    width: 450px;
+    height: 450px;
+    
+    border: 1px solid red;
+  
+  }
+
+  project p, figcaption {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-left: 0 auto;
+    text-align: center;
+    padding: auto;
+  }
+  
+  project #image:hover {
+      transform: scale(1.2);
+      z-index: 1;
+      content: "Welcome";
+  }
+  
+  project p, project figcaption {
+    height: 10px;
+  }
+  
+  .project-tile {
+      background-color: transparent;
+      
+  
+  }
+  
+  .profile-link {
+    display: block;
+    padding: 8px;
+    background-color: #8369e9;
+  
+  }
+  
+  
+  #footer {
+    text-align: center;
+    
+  }
+  
+  @media only screen and (max-width: 100px) {
+  li {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,17 @@
+function divide(arr1, arr2) { 
+      return arr1.every(function(currentValue){
+        return currentValue / (arr2.every(function(currentValue){
+          return currentValue !== 0;
+        }));
+      })
+         
+    }
+    let value = 0
+    for(let i=0; i < dividerArr.length; i++){
+      value = dividerArr[i] / rangeArr[i];
+      if(divide(dividerArr, rangeArr)){
+        return value;
+      }
+    }
+    
+    console.log(finalValues);

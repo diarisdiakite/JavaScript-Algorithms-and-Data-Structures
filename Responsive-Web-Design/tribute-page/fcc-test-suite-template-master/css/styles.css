@@ -1,10 +1,16 @@
 #main {
-
+  background-color: whitesmoke;
+  padding: 10px;
 }
 #title {
-
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
+
 #main #img-div {
+  width: 100%;
+  margin: auto;
 
 }
 #main #image {
@@ -14,11 +20,20 @@
   display: block;
 }
 #main #img-caption {
-
+  text-align: center;
 }
-#main #tribute-info {
-
+#main #tribute-info p {
+  text-align: center;
 }
 #main #tribute-link {
 
+}
+#information {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+#information p, #information ul, #information ul li {
+  padding: 10px;
+  text-align: justify;
 }
